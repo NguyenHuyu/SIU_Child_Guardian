@@ -1,8 +1,9 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
-import authRoutes from "./routes/auths.js"
 import cookieParser from "cookie-parser"
+import authRoutes from "./routes/auths.js"
+import userRoutes from "./routes/users.js"
 
 const app = express()
 const PORT = 10000
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use("/api/auth", authRoutes)
+app.use("/api/users", userRoutes)
 
 
 mongoose.connect(process.env.URI_key,{
