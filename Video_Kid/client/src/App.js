@@ -10,6 +10,7 @@ import SignIn from "./pages/SignIn";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import "./index.css"
+import { violetTheme, greenTheme } from "./theme/Theme";
 const Container = styled.div`
   display: flex;
   
@@ -22,17 +23,18 @@ const Main = styled.div`
 
 const Wrapper=styled.div`
 flex: 7;
-background-color: #cfcede;
+background-color: ${({ theme }) => theme.bgmain};
 min-height: 100vh;
 ;`
 
 function App() {
-  
+  const [violetMode, setVioletMode] = useState(true);
   const { currentUser } = useSelector((state) => state.user);
   return (
+    <ThemeProvider theme={violetMode ? violetTheme : greenTheme}>
    <Container>
       <BrowserRouter>
-      <Menu></Menu>
+      <Menu violetMode={violetMode} setVioletMode={setVioletMode} ></Menu>
       <Main>
           <Navbar></Navbar>
               <Wrapper>
@@ -54,6 +56,7 @@ function App() {
       </Main>
       </BrowserRouter>
    </Container>
+   </ThemeProvider>
   );
 }
 

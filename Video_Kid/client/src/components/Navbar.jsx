@@ -14,7 +14,7 @@ import Upload from "./Upload";
 const Container = styled.div`
   position: sticky;
   top: 0;
-  background-color: #6D68A0;	
+  background-color: ${({ theme }) => theme.bgmenu};
   height: 56px;
   z-index:10;
 `;

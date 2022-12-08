@@ -28,7 +28,7 @@ const Search = () => {
   var a=videos.length;
 
   return(
-   a!=0?(<Container>{videos.map(video=>(<Card key={video._id} video={video}/>))}</Container>)
+   a!==0?(<Container>{videos.map(video=>(<Card key={video._id} video={video}/>))}</Container>)
    : (<Text>Không tìm thấy kết quả</Text>)
   )
 };

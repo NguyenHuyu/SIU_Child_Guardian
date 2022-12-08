@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 //111
 const Container = styled.div`
     flex: 1;
-    background-color: #6D68A0;
+    background-color: ${({ theme }) => theme.bgmenu};
     height: 100vh;
     position: sticky;
     top:0;
@@ -55,7 +55,7 @@ const Hr = styled.hr`
     border: 1px solid #fff;
 `
 
-const Menu = ({lightMode,setLightMode}) => {
+const Menu = ({ violetMode, setVioletMode }) => {
     const {currentUser} = useSelector((state) => state.user)
     
     return(
@@ -88,16 +88,16 @@ const Menu = ({lightMode,setLightMode}) => {
             </Item>
             </Link>
             <Hr/>
-            <Item>
-                <ToggleOffIcon/>
-                Chế độ màu
-            </Item>
             <Link to={`/chat`} style={{textDecoration:"none"}}>
             <Item>
                 <QuestionAnswerIcon/>
                 Trò chuyện 
             </Item>
             </Link>
+            <Item onClick={() => setVioletMode(!violetMode)}>
+            <ToggleOffIcon></ToggleOffIcon>{violetMode ? "Tím" : "Xanh ngọc"}
+            </Item>
+           
         </Container>
         }
         </>

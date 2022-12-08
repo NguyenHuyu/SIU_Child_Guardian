@@ -9,7 +9,7 @@ const WrapperCard=styled.a`
   width: 300px;
   min-height: 260px;
   border-radius: 20px;
-  background-color: #514c88;
+  background-color: ${({ theme }) => theme.bgmenu};
   flex-direction: column;
   word-wrap: break-word;
   padding-bottom: 1.5vh;
