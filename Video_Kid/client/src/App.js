@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-
+import "./index.css"
 const Container = styled.div`
   display: flex;
   
