@@ -44,11 +44,12 @@ const Title=styled.p`
   font-size: 16px;
   font-weight: bolder;
   margin:10px 0px 10px 0px ;
-  color:${({ theme }) => theme.fontcolor};
+  color:white;
+  padding-right: 3px;
 `
 const Spandetails=styled.span`
   font-size: 14px;
-  color:${({ theme }) => theme.fontcolor};
+  color:white;
 `
 
 

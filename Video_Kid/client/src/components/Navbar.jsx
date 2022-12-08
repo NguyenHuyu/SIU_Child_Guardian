@@ -40,9 +40,9 @@ const Search = styled.div`
   justify-content: space-between;
   padding: 5px;
   border: 1px solid ;
-  border-color: ${({ theme }) => theme.fontcolor};
+  border-color: white;
   border-radius: 3px;
-  color:${({ theme }) => theme.fontcolor};
+  color:white;
   border-radius: 20px;
 `;
 
@@ -50,14 +50,14 @@ const Input = styled.input`
   border: none;
   outline: none;
   background-color: transparent;
-  color:${({ theme }) => theme.fontcolor};
+  color:white;
   font-size: 13px;
   width: 100%;
   height: 25px;
   padding-left: 10px;
   
   ::placeholder{
-    color:${({ theme }) => theme.fontcolor};
+    color:white;
   }
 
 `;
@@ -89,7 +89,7 @@ const User = styled.div`
   align-items: center;
   gap: 10px;
   font-weight: 500;
-  color:${({ theme }) => theme.fontcolor};
+  color:white;
   margin-right: 20px;
 `;
 
