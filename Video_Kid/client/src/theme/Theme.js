@@ -6,7 +6,7 @@ export const violetTheme = {
   shadowcard:"1px 1px 1px 1px #45407d",
   }
   export const greenTheme = {
-    bgmenu:"#12d288",
+    bgmenu:"#3ba66b",
     bgmain:"#90c8b2",
     bgcard:"#1b7451",
     fontcolor:"#fff",

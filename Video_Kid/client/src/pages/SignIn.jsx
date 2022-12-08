@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #6d68a0;
+  background-color: ${({ theme }) => theme.bgmenu};
   border: 1px solid #000;
   padding: 20px 50px;
   gap: 10px;
@@ -27,14 +27,14 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 24px;
-  color: #fbff00;
+  color: ${({ theme }) => theme.fontcolor};
 
 `;
 
 const SubTitle = styled.h2`
   font-size: 20px;
   font-weight: 300;
-  color: #f2ff00;
+  color: ${({ theme }) => theme.fontcolor};
 `;
 
 const Input = styled.input`
