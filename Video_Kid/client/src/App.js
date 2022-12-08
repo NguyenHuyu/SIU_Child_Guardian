@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar"
 import Home from './pages/Home';
+import Explore from './pages/Home';
 import Video from './pages/Video';
 import Search from './pages/Search';
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
@@ -38,6 +39,7 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={currentUser ? <Home type="random" /> : <SignIn/> } />
+                  <Route path='explore' element={<Explore type= "random"/>} ></Route>
                   <Route path='search' element={<Search></Search>} ></Route>
                   <Route
                     path="signin"
