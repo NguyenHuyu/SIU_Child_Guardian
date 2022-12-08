@@ -99,7 +99,18 @@ const Avatar = styled.img`
 
 
 const Navbar = () => {
+  const navigate=useNavigate();
+  const [open,setOpen]=useState(false);
+  const [q,setQ]=useState("");
+  const {currentUser}=useSelector((state)=>state.user );
+  const dispatch=useDispatch()
 
+  const logout=()=>{
+  localStorage.removeItem('curentUser')
+  localStorage.removeItem('persist:root')
+  dispatch(loginSuccess())
+  navigate('/signin');
+                    }
 
     
     
@@ -107,37 +118,37 @@ const Navbar = () => {
       <>
       <Container>
         <Wrapper>
-          
+          {currentUser && <>
             <Search>
             <Input
               placeholder="Tìm kiếm"
-             
+              onChange={(e) => setQ(e.target.value)}
             />
-            <SearchOutlinedIcon  />
-          </Search>
-        
+            <SearchOutlinedIcon onClick={()=>navigate(`/search?q=${q}`)} style={{cursor:"pointer"}} />
+          </Search></>}
+          {currentUser ? (
             <User>
-              <VideoCallOutlinedIcon /> 
-              <Avatar  />
-           
+              <VideoCallOutlinedIcon onClick={() => setOpen(true)} style={{cursor:"pointer",marginRight:"10px"}} /> 
+              <Avatar src={currentUser.img} />
+              {currentUser.name}
             </User>
-      
-           
+          ) : (
+            <Link to="signin" style={{ textDecoration: "none" }}>
               <Button>
                 <AccountCircleOutlinedIcon />
                 ĐĂNG NHẬP
               </Button>
-          
-          
-          
-              <Button >
+            </Link>
+          )}
+            {currentUser && <>
+              <Button onClick={logout}>
               Đăng xuất
             </Button>
-          
-            
+            </>
+            }
         </Wrapper>
       </Container>
-   
+      {open && <Upload setOpen={setOpen} />}
      
     </>
     )
