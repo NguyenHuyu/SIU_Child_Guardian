@@ -20,3 +20,19 @@ export const addVideo = async (req, res, next) => {
       next(err);
     }
 }
+
+export const deleteVideo = async(req, res, next)=>{
+    try {
+        const video = await Video.findById(req.params.id)
+        if(!video)
+            return res.status(404).send("Không tìm thấy video xóa")
+        if(req.params._id === video.userId){
+            await Video.findByIdAndDelete(req.params.id)
+            res.status(200).send("Đã xóa thành công video")
+        }else{
+            return res.status(403).send("Khong thể xóa video người khác")
+        }
+    } catch (error) {
+        next(error)
+    }
+}
