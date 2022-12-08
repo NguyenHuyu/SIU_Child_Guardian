@@ -17,7 +17,7 @@ const WrapperCard=styled.a`
   color: white;
   font-family: 'Comfortaa', cursive;
   margin:30px 14px 14px 14px;
-  box-shadow: 2px 2px 2px 2px #45407d;
+  box-shadow: 1px 1px 1px 1px #45407d;
 
   :hover{
     opacity: 0.8;

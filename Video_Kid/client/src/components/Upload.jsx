@@ -74,10 +74,16 @@ const Button = styled.button`
   border-radius: 3px;
   border: none;
   padding: 10px 20px;
-  font-weight: 500;
   cursor: pointer;
-  
   color: black;
+  font-weight: bolder;
+  &:hover{
+        background-image: linear-gradient(#ff4000,#ff9500);
+        color:#252b00;
+        cursor: pointer;    
+        box-lines: none;
+       
+    }
 `;
 const Label = styled.label`
   font-size: 14px;
