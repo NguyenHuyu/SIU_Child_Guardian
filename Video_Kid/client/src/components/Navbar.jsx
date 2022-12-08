@@ -129,7 +129,7 @@ const Navbar = () => {
           </Search></>}
           {currentUser ? (
             <User>
-              <VideoCallOutlinedIcon onClick={() => setOpen(true)} style={{cursor:"pointer",marginRight:"10px"}} /> 
+              <a title="Đăng video"><VideoCallOutlinedIcon onClick={() => setOpen(true)} style={{cursor:"pointer",marginRight:"10px"}} /> </a>
               <Avatar src={currentUser.img} />
               {currentUser.name}
             </User>
