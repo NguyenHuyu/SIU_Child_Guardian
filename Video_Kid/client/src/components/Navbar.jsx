@@ -142,7 +142,7 @@ const Navbar = () => {
           )}
             {currentUser && <>
               <Button onClick={logout}>
-              Đăng xuất
+              ĐĂNG XUẤT
             </Button>
             </>
             }
