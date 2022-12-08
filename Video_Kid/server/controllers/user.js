@@ -24,14 +24,13 @@ export const deleteUser = async(req, res, next)=>{
 
 export const subscribe = async (req, res, next) => {
   try {
-    await User.findByIdAndUpdate(req.user.id, {
+    await User.findByIdAndUpdate(req.params.id, {
       $push: { subscribedUsers: req.params.id },
     });
     await User.findByIdAndUpdate(req.params.id, {
       $inc: { subscribers: 1 },
     });
-    res.status(200).json("Subscription successfull")
-
+    res.status(200).json("Đăng Kí Thành Công")
   } catch (err) {
     next(err);
   }
