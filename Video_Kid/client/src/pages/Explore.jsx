@@ -10,6 +10,7 @@ flex-wrap: wrap;
 margin-top: -5px;
 `
 const Explore = ({type}) => {
+  window.location.reload();
   
   const [Videos,setVideos]=useState([]);
 
@@ -21,7 +22,7 @@ const Explore = ({type}) => {
       fetchVideos();
     },[type]);
 
-  
+    
   
   return (
     <div>
