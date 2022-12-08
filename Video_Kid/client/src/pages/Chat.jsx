@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import OfficialLogo from "../img/OfficialLogo.png"
 import lichsuvn from "../img/lichsuvn.png"
 import tuduyst from "../img/tuduyst.png"
 import kynangsong from "../img/kynangsong.webp"
