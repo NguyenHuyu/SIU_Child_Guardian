@@ -87,7 +87,7 @@ const User = styled.div`
   align-items: center;
   gap: 10px;
   font-weight: 500;
-  color: white;
+  color:${({ theme }) => theme.fontcolor};
   margin-right: 20px;
 `;
 
