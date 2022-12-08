@@ -47,7 +47,7 @@ const Title=styled.p`
   color:${({ theme }) => theme.fontcolor};
 `
 const Spandetails=styled.span`
-  font-size: 15px;
+  font-size: 14px;
   color:${({ theme }) => theme.fontcolor};
 `
 

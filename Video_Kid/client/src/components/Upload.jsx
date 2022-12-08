@@ -27,8 +27,8 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 600px;
   height: 600px;
-  background-color: #9c97b6;
-  color: #e1ff00;
+  background-color: ${({ theme }) => theme.bgmenu};
+  color:${({ theme }) => theme.fontcolor};
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -50,23 +50,23 @@ const Title = styled.h1`
 
 const Input = styled.input`
   border: 1px solid white;
-  color: #e1ff00;
+  color:${({ theme }) => theme.fontcolor};
   border-radius: 3px;
   padding: 10px;
   background-color: transparent;
   ::placeholder{
-    color: #e1ff00;
+    color:${({ theme }) => theme.fontcolor};
   
   }
 `;
 const Desc = styled.textarea`
   border: 1px solid white;
-  color: #e1ff00;
+  color:${({ theme }) => theme.fontcolor};
   border-radius: 3px;
   padding: 10px;
   background-color: transparent;
   ::placeholder{
-    color: #e1ff00;
+    color:${({ theme }) => theme.fontcolor};
     
   }
 `;
