@@ -38,7 +38,6 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={currentUser ? <Home type="random" /> : <SignIn/> } />
-                  <Route path='/' element={<Home></Home>}></Route>
                   <Route path='search' element={<Search></Search>} ></Route>
                   <Route
                     path="signin"
