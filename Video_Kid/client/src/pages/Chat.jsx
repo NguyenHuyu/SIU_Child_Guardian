@@ -12,16 +12,16 @@ const Wrapper=styled.div`
 display: flex;
 width: 70vw;
 height: 70vh;
-background-color: #98a0e9;
+background-color: ${({ theme }) => theme.bgmenu};
 margin-top: 50px;
 `
 const WrapperInfo=styled.div`
 flex:3;
-border: 2px solid #5960a2;
+border: 2px solid black;
 `
 const WrapperChat=styled.div`
 flex:7;
-border: 2px solid #5960a2;
+border: 2px solid black;
 `
 
 const WrapperUser=styled.div``
@@ -35,8 +35,8 @@ const Button=styled.button`
   border-radius:50px;
   border: none;
   cursor: pointer;
-  background-color: #7878cf;
-  box-shadow: 1px 1px 1px 1px #4963bf;
+  background-color: white;
+  border-color: black;
 `
 const Input=styled.input`
   width: 40vw;
@@ -49,13 +49,14 @@ const Input=styled.input`
 const He=styled.div`
 flex: 3;
 height: 60px;
-background-color: #7a76ac;
+background-color: ${({ theme }) => theme.bgmenu};
 margin-top: 5px;
 display: flex;
 align-items: center;
 border-radius: 10px;
 margin-left: 5px;
 padding-left: 10px;
+border: 3px solid black;
 `
 const AvtUser=styled.img`
 width: 50px;
