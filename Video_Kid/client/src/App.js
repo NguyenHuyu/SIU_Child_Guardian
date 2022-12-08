@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Explore from './pages/Home';
 import Video from './pages/Video';
 import Search from './pages/Search';
+import Subs from './pages/Subs';
+import Chat from './pages/Chat';
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import { useSelector } from "react-redux";
@@ -41,8 +43,10 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={currentUser ? <Home type="random" /> : <SignIn/> } />
-                  <Route path='explore' element={<Explore type= "random"/>} ></Route>
+                  <Route path='explore' element={<Explore type= "random"></Explore>} ></Route>
                   <Route path='search' element={<Search></Search>} ></Route>
+                  <Route path='subs' element={<Subs></Subs>} ></Route>
+                  <Route path='chat' element={<Chat></Chat>} ></Route>
                   <Route
                     path="signin"
                     element={ <SignIn />}

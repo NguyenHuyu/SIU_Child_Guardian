@@ -11,6 +11,7 @@ margin-top: -5px;
 `
 const Home = ({type}) => {
   
+  
   const [Videos,setVideos]=useState([]);
 
   useEffect(()=>{
@@ -18,7 +19,7 @@ const Home = ({type}) => {
         const res=await axios.get(`/videos/${type}`);
         setVideos(res.data);
       };
-      fetchVideos();
+      fetchVideos()
     },[type]);
 
   
