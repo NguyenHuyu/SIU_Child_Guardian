@@ -14,14 +14,14 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #000000a7;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 11;
+  z-index: 1;
 `;
 
 const Wrapper = styled.div`
@@ -74,15 +74,14 @@ const Button = styled.button`
   border-radius: 3px;
   border: none;
   padding: 10px 20px;
+  font-weight: 500;
   cursor: pointer;
   color: black;
-  font-weight: bolder;
   &:hover{
         background-image: linear-gradient(#ff4000,#ff9500);
         color:#252b00;
         cursor: pointer;    
         box-lines: none;
-       
     }
 `;
 const Label = styled.label`
