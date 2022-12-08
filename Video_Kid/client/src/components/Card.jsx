@@ -17,7 +17,7 @@ const WrapperCard=styled.a`
   color: white;
   font-family: 'Comfortaa', cursive;
   margin:30px 14px 14px 14px;
-  box-shadow: 1px 1px 1px 1px #45407d;
+  box-shadow: ${({ theme }) => theme.shadowcard};
 
   :hover{
     opacity: 0.8;
@@ -44,9 +44,11 @@ const Title=styled.p`
   font-size: 16px;
   font-weight: bolder;
   margin:10px 0px 10px 0px ;
+  color:${({ theme }) => theme.fontcolor};
 `
 const Spandetails=styled.span`
-  font-size: 15px;
+  font-size: 14px;
+  color:${({ theme }) => theme.fontcolor};
 `
 
 

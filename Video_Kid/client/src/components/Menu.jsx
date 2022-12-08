@@ -38,7 +38,7 @@ const Item = styled.div`
     align-items: center;
     gap: 15px;
     padding: 25px 25px;
-    color:#e1ff00;
+    color:${({ theme }) => theme.fontcolor};
     font-family: 'Comfortaa', cursive;
     font-weight: bolder ;
     text-shadow: 0.5px 0.5px 0.5px 0.5px #00454a;
