@@ -53,6 +53,7 @@ const Input = styled.input`
   font-size: 13px;
   width: 100%;
   height: 25px;
+  padding-left: 10px;
   ::placeholder{
     color: white;
   }
