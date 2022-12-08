@@ -26,13 +26,32 @@ min-height: 100vh;
 ;`
 
 function App() {
+  
+  const { currentUser } = useSelector((state) => state.user);
   return (
    <Container>
+      <BrowserRouter>
       <Menu></Menu>
       <Main>
           <Navbar></Navbar>
-          <Wrapper></Wrapper>
+              <Wrapper>
+              <Routes>
+                <Route path="/">
+                  <Route index element={currentUser ? <Home type="random" /> : <SignIn/> } />
+                  <Route path='/' element={<Home></Home>}></Route>
+                  <Route path='search' element={<Search></Search>} ></Route>
+                  <Route
+                    path="signin"
+                    element={ <SignIn />}
+                  />
+                   <Route path="video">
+                    <Route path=":id" element={<Video />} />
+                  </Route>
+                </Route>
+              </Routes>
+              </Wrapper>
       </Main>
+      </BrowserRouter>
    </Container>
   );
 }
