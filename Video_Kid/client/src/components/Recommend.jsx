@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Card from "./Card";
+import CardRecommend from "./CardRecommend";
 
 const Container = styled.div`
   flex: 2;
@@ -21,7 +21,7 @@ const Recommend = ({ tags } , {type}) => {
   return (
     <Container>
       {videos.map((video) => (
-        <Card type="sm" key={video._id} video={video} />
+        <CardRecommend type="sm" key={video._id} video={video} />
       ))}
     </Container>
   );
