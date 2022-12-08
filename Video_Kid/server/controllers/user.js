@@ -14,8 +14,8 @@ export const deleteUser = async(req, res, next)=>{
         try {
           await User.findByIdAndDelete(req.params.id);
           res.status(200).send("Tài khoản đã được xóa");
-        } catch (err) {
-          next(err);
+        } catch (error) {
+          next(error);
         }
       } else {
         return res.status(403).send("Bạn không thể xóa tài khoản người khác");
