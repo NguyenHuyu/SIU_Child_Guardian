@@ -34,7 +34,7 @@ const Search = styled.div`
   position: absolute;
   left: 0px;
   right: 0px;
-  margin: auto;
+  margin-left: 20vw;
   display: flex;
   align-items: center;
   justify-content: space-between;

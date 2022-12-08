@@ -155,7 +155,7 @@ const Upload = ({ setOpen }) => {
     <Container>
       <Wrapper>
         <Close onClick={() => setOpen(false)}>X</Close>
-        <Title>Upload a New Video</Title>
+        <Title>Đăng video mới</Title>
         <Label>Video:</Label>
         {videoPerc > 0 ? (
           "Uploading:" + videoPerc
@@ -168,22 +168,22 @@ const Upload = ({ setOpen }) => {
         )}
         <Input
           type="text"
-          placeholder="Title"
+          placeholder="Tiêu đề"
           name="title"
           onChange={handleChange}
         />
         <Desc
-          placeholder="Description"
+          placeholder="Mô tả"
           name="desc"
           rows={8}
           onChange={handleChange}
         />
         <Input
           type="text"
-          placeholder="Separate the tags with commas."
+          placeholder="Nhập các tag, cách nhau bằng dấu phẩy (nếu hơn 2 tag)"
           onChance={handleTags}
         />
-        <Label>Image:</Label>
+        <Label>Hình ảnh:</Label>
         {imgPerc > 0 ? (
           "Uploading:" + imgPerc + "%"
         ) : (
