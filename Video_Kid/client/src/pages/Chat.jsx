@@ -1,7 +1,8 @@
 import React from 'react'
-
 import styled from "styled-components"
-import OfficialLogo from "../img/OfficialLogo.png"
+import lichsuvn from "../img/lichsuvn.png"
+import tuduyst from "../img/tuduyst.png"
+import kynangsong from "../img/kynangsong.webp"
 const Container=styled.div`
 display: flex;
 justify-content: center;
@@ -11,16 +12,16 @@ const Wrapper=styled.div`
 display: flex;
 width: 70vw;
 height: 70vh;
-background-color: #98a0e9;
+background-color: ${({ theme }) => theme.bgmenu};
 margin-top: 50px;
 `
 const WrapperInfo=styled.div`
 flex:3;
-border: 2px solid #5960a2;
+border: 2px solid black;
 `
 const WrapperChat=styled.div`
 flex:7;
-border: 2px solid #5960a2;
+border: 2px solid black;
 `
 
 const WrapperUser=styled.div``
@@ -34,8 +35,8 @@ const Button=styled.button`
   border-radius:50px;
   border: none;
   cursor: pointer;
-  background-color: #7878cf;
-  box-shadow: 1px 1px 1px 1px #4963bf;
+  background-color: white;
+  border-color: black;
 `
 const Input=styled.input`
   width: 40vw;
@@ -48,13 +49,14 @@ const Input=styled.input`
 const He=styled.div`
 flex: 3;
 height: 60px;
-background-color: #7a76ac;
+background-color: ${({ theme }) => theme.bgmenu};
 margin-top: 5px;
 display: flex;
 align-items: center;
 border-radius: 10px;
 margin-left: 5px;
 padding-left: 10px;
+border: 3px solid black;
 `
 const AvtUser=styled.img`
 width: 50px;
@@ -71,20 +73,17 @@ export const Chat = () => {
     <Container >
         <Wrapper>
             <WrapperInfo>
-                    <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
-                      <NameUser>Tổng đài viên Child Guardian</NameUser>
-                  </He>
+                   
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={kynangsong} ></AvtUser>
                       <NameUser>Kỹ năng sống</NameUser>
                   </He>
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={lichsuvn} ></AvtUser>
                       <NameUser>Lịch sử Việt Nam</NameUser>
                   </He>
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={tuduyst} ></AvtUser>
                       <NameUser>Tư duy sáng tạo</NameUser>
                   </He>
                   
