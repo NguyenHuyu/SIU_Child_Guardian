@@ -1,11 +1,30 @@
-import React from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import Card from "./Card";
 
-const Recommend = () => {
+const Container = styled.div`
+  flex: 2;
+`;
+
+const Recommend = ({ tags } , {type}) => {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const res = await axios.get(`/videos/tags?tags=${tags}`);
+      setVideos(res.data);
+    };
+    fetchVideos();
+  }, [tags] , [type]);
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Container>
+      {videos.map((video) => (
+        <Card type="sm" key={video._id} video={video} />
+      ))}
+    </Container>
+  );
+};
 
-export default Recommend
+export default Recommend;

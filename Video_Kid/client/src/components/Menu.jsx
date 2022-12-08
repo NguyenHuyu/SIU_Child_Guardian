@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Cottage';
 import ExploreIcon from '@mui/icons-material/Explore';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -71,19 +72,19 @@ const Menu = ({lightMode,setLightMode}) => {
             <Link to={`/`} style={{textDecoration:"none"}}>
             <Item>
                 <HomeIcon/>
-                Home
+                Trang Chủ
             </Item>
             </Link>
             <Link to={`/explore`} style={{textDecoration:"none"}}>
             <Item>
                 <ExploreIcon/>
-                Explore
+                Khám phá
             </Item>
             </Link>
             <Link to={`/subs`} style={{textDecoration:"none"}}>
             <Item>
                 <SubscriptionsIcon/>
-                Subscriptions 
+                Kênh đăng kí 
             </Item>
             </Link>
             <Hr/>
@@ -91,6 +92,12 @@ const Menu = ({lightMode,setLightMode}) => {
                 <ToggleOffIcon/>
                 Chế độ màu
             </Item>
+            <Link to={`/chat`} style={{textDecoration:"none"}}>
+            <Item>
+                <QuestionAnswerIcon/>
+                Trò chuyện 
+            </Item>
+            </Link>
         </Container>
         }
         </>
