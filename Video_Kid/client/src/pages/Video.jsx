@@ -9,11 +9,13 @@ import Recommendation from "../components/Recommend";
 const Container = styled.div`
   display: flex;
   gap: 24px;
+  justify-content: center;
 `;
 
 const Content = styled.div`
   width: 800px;
   margin: 5vh 4vw;
+  flex: 8;
 
 `;
 const VideoWrapper = styled.div``;
@@ -83,6 +85,7 @@ const VideoFrame = styled.video`
 
 const RecommendWrapper = styled.div`
   margin: 20px;
+  flex: 2;
 `;
 
 const Video = () => {

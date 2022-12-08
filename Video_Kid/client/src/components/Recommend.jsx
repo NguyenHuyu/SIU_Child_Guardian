@@ -7,7 +7,7 @@ const Container = styled.div`
   flex: 2;
 `;
 
-const Recommend = ({ tags } , {type}) => {
+const Recommend = ({ tags }) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Recommend = ({ tags } , {type}) => {
       setVideos(res.data);
     };
     fetchVideos();
-  }, [tags] , [type]);
+  }, [tags]);
 
   return (
     <Container>
