@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Container = styled.div`
   display: flex;
@@ -49,7 +50,6 @@ const Button = styled.button`
     padding: 15px 15px;
     color:#313800;
     gap: 10px;
-    font-family: 'Comfortaa', cursive;
     font-weight: bolder;
     margin: 20px 25px;
     border: 1px solid #430101;
@@ -64,7 +64,6 @@ const Button = styled.button`
 const More = styled.div`
   display: flex;
   margin-top: 10px;
-  font-family: 'Comfortaa', cursive;
   font-weight: bolder;
   font-size: 12px;
 `;
@@ -108,7 +107,10 @@ const SignIn = () => {
           placeholder="Mật khẩu"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button onClick={handleLogin}>Sign in</Button>
+        <Button onClick={handleLogin}>
+          Let's Go
+          <ArrowForwardIcon/>
+        </Button>
       </Wrapper>
       <More>
         <Team>New Seed</Team>
