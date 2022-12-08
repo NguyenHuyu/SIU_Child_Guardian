@@ -15,10 +15,12 @@ const Container = styled.div`
 const Content = styled.div`
   width: 800px;
   margin: 5vh 4vw;
-  flex: 8;
+  flex: 7;
 
 `;
-const VideoWrapper = styled.div``;
+const VideoWrapper = styled.div`
+
+`;
 
 const Title = styled.h1`
   font-size: 18px;
@@ -78,14 +80,14 @@ const Hr = styled.hr`
 `
 
 const VideoFrame = styled.video`
-  height: 500px;
+  height: 100%;
   width: 100%;
-
+  border: 0.5px solid #878585;
 `;
 
 const RecommendWrapper = styled.div`
-  margin: 20px;
-  flex: 2;
+  margin: 15px;
+  flex: 3;
 `;
 
 const Video = () => {
