@@ -1,7 +1,9 @@
 import React from 'react'
-
 import styled from "styled-components"
 import OfficialLogo from "../img/OfficialLogo.png"
+import lichsuvn from "../img/lichsuvn.png"
+import tuduyst from "../img/tuduyst.png"
+import kynangsong from "../img/kynangsong.webp"
 const Container=styled.div`
 display: flex;
 justify-content: center;
@@ -71,20 +73,17 @@ export const Chat = () => {
     <Container >
         <Wrapper>
             <WrapperInfo>
-                    <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
-                      <NameUser>Tổng đài viên Child Guardian</NameUser>
-                  </He>
+                   
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={kynangsong} ></AvtUser>
                       <NameUser>Kỹ năng sống</NameUser>
                   </He>
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={lichsuvn} ></AvtUser>
                       <NameUser>Lịch sử Việt Nam</NameUser>
                   </He>
                   <He>
-                      <AvtUser src={OfficialLogo} ></AvtUser>
+                      <AvtUser src={tuduyst} ></AvtUser>
                       <NameUser>Tư duy sáng tạo</NameUser>
                   </He>
                   
