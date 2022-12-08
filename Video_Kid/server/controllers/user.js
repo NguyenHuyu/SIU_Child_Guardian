@@ -21,3 +21,18 @@ export const deleteUser = async(req, res, next)=>{
         return res.status(403).send("Bạn không thể xóa tài khoản người khác");
       }
 }
+
+export const subscribe = async (req, res, next) => {
+  try {
+    await User.findByIdAndUpdate(req.user.id, {
+      $push: { subscribedUsers: req.params.id },
+    });
+    await User.findByIdAndUpdate(req.params.id, {
+      $inc: { subscribers: 1 },
+    });
+    res.status(200).json("Subscription successfull")
+
+  } catch (err) {
+    next(err);
+  }
+};
