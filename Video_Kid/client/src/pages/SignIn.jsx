@@ -27,12 +27,14 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 24px;
+  color: #fbff00;
+
 `;
 
 const SubTitle = styled.h2`
   font-size: 20px;
   font-weight: 300;
-  color: #000;
+  color: #f2ff00;
 `;
 
 const Input = styled.input`
