@@ -58,8 +58,19 @@ export const sub = async (req, res, next) => {
           return await Video.find({ userId: channelId });
         })
       );
-  
       res.status(200).json(list.flat().sort((a, b) => b.createdAt - a.createdAt));
+    } catch (err) {
+      next(err);
+    }
+}
+
+export const search = async (req, res, next) => {
+    const query = req.query.q;
+    try {
+      const videos = await Video.find({
+        title: { $regex: query, $options: "i" },
+      }).limit(40);
+      res.status(200).json(videos);
     } catch (err) {
       next(err);
     }
